@@ -15,7 +15,7 @@ Key features include:
 - 🔗 **LangChain + Python backend**: Integrated with a React frontend to enable dynamic conversations and user support.
 - ☁️ **Hosted on GCP**: All services are deployed on Google Cloud for scalability and reliability.
 
-The backend utilizes the [Core Solution Services repository](https://github.com/GoogleCloudPlatform/core-solution-services) from Google Cloud.
+The backend utilizes the [Core Solution Services](https://github.com/GoogleCloudPlatform/core-solution-services) repository from Google Cloud.
 
 # Local Development
 
