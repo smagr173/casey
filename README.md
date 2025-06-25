@@ -1,4 +1,4 @@
-# Casey (MIRA) FE (Frontend)
+# Casey (MIRA)
 
 ## Project Overview
 
