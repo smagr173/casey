@@ -144,7 +144,6 @@ const GenAIChat: React.FC<GenAIChatProps> = ({
           }
         },
         onError: (error) => {
-          setActiveJob(false)
           console.error("Send failed", error)
         }
       }

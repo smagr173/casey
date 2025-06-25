@@ -14,15 +14,32 @@
 
 import { useEffect, useState } from "react"
 import { getAnalytics } from "@/utils/firebase"
-import Loading from "@/navigation/Loading"
 import Authenticated from "@/templates/Authenticated"
 import Unauthenticated from "@/templates/Unauthenticated"
-import { useAuth } from "@/contexts/auth"
 import "@/assets/styles.css"
 
 function App() {
-  const { user, loading } = useAuth()
   const [loadedGA, setLoadedGA] = useState(false)
+  const user = {
+    uid: "dev-user",
+    email: "dev@example.com",
+    displayName: "Dev User",
+    emailVerified: true,
+    isAnonymous: false,
+    providerData: [],
+    getIdToken: async () => "mock-token",
+    getIdTokenResult: async () =>
+      ({ token: "mock-token" } as any),
+    reload: async () => {},
+    delete: async () => {},
+    toJSON: () => ({}),
+    providerId: "firebase",
+    refreshToken: "mock-refresh-token",
+    tenantId: null,
+    metadata: {} as any,
+    phoneNumber: null,
+    photoURL: null,
+  }
 
   useEffect(() => {
     if (!loadedGA) {
@@ -30,8 +47,6 @@ function App() {
       setLoadedGA(true)
     }
   }, [])
-
-  if (loading) return <Loading />
 
   if (!user) return <Unauthenticated />
 

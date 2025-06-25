@@ -41,7 +41,7 @@ export function AuthProvider({ children }: any) {
         setUser(null)
         nookies.destroy(null, "token")
         nookies.set(null, "token", "", { path: "/" })
-        navigate("/signin")
+        navigate("/plans")
         return
       }
 

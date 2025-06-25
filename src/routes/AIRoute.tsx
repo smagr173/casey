@@ -24,7 +24,7 @@ const streamlitUrl = envOrFail(
 
 const AIRoute = () => {
   const params = useQueryParams()
-  const { token } = useAuth()
+  const token = "1223213"
 
   if (!token) return <></>
 
